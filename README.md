@@ -9,8 +9,11 @@ and perform the following operations on the CSV data
 - The program was written in Java, using JAVA 7.
 Install java and run the program from command prompt
 
-The program accepts one input parameter as the address to the S3 bucket.
-example : java Zipdownload "http://s3.amazonaws.com/brightfuture/mydata.csv.gz"
+The program accepts one command line parameter as the address to the S3 bucket.
 
+- example : java Zipdownload "http://s3.amazonaws.com/brightfuture/mydata.csv.gz"
 
+mydata.csv.gz is a template file that I have stored in my AWS S3 bucket which you can use for practice
+purposes
 
+Note: I have not performed complete error handling which I would add later.
