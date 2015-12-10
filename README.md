@@ -6,8 +6,8 @@ and perform the following operations on the CSV data
 - count the number of devices with resolution 640*960
 - total amount spent by all users and return the ID of the first user that joined the organization
 
-- The program was written in Java, using JAVA 7.
-Install java and run the program from command prompt
+- The program is written in Java.(JAVA 7)
+Install java 7 and run the program from command prompt
 
 The program accepts one command line parameter as the address to the S3 bucket.
 
