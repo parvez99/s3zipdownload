@@ -26,7 +26,7 @@ import com.univocity.parsers.common.processor.*;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;
 import java.util.HashMap;
-public class swrve {
+public class Zipdownload {
 
 	List csvfile;
 	public URL url;
@@ -34,7 +34,7 @@ public class swrve {
 	public String output_csv_file;
     public int count;
 	
-	swrve(URL input_url,String ofile,String ifile)
+	Zipdownload(URL input_url,String ofile,String ifile)
 	{
 		count = 0;
 		url = input_url;
@@ -292,7 +292,7 @@ public class swrve {
 	public static void main(String[] args) {
 		try{
 				URL url = new URL(args[0]);
-				swrve obj = new swrve(url,"test_file1.gz","test_file1.csv"); //Parametrized constructor to initialise url,.gz and .csv file names.
+				Zipdownload obj = new Zipdownload(url,"test_file1.gz","test_file1.csv"); //Parametrized constructor to initialise url,.gz and .csv file names.
 				obj.downloadFile();
 				obj.unZipIt();
 				obj.readCSV();
