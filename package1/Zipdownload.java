@@ -37,9 +37,9 @@ public class Zipdownload {
 	Zipdownload(URL input_url,String ofile,String ifile)
 	{
 		count = 0;
-		url = input_url;
-		gz_file = ofile;
-		output_csv_file = ifile;
+		url = input_url;	//URL to S3 bucket
+		gz_file = ofile;	//.gz file name
+		output_csv_file = ifile;	//output file where csv data would be stored
 	}
 	
 	public void downloadFile() {
@@ -256,7 +256,7 @@ public class Zipdownload {
 			CSVReader reader = new CSVReader(new FileReader(output_csv_file));
 			String [] nextLine;
 			csvfile = reader.readAll();
-			System.out.println((csvfile.size()-1));
+			System.out.println((csvfile.size()-1));	//Prints total number of users in the file
 			
 			
 			//CsvParserSettings settings = new CsvParserSettings();
@@ -275,9 +275,9 @@ public class Zipdownload {
 
 			//Thus we get the column values:
 			Map<String, List<String>> columnValues = rowProcessor.getColumnValuesAsMapOfNames();
-			System.out.println(deviceResolution(columnValues));
-			System.out.println(totalSpendInDollars(columnValues));
-			System.out.println(firstUser(columnValues));
+			System.out.println("Total number of devices with specified resolution are:"+deviceResolution(columnValues));		//Displays total number of devices with specified resolution
+			System.out.println("Total amount spent: "+totalSpendInDollars(columnValues));	//Displays total amount spent in Dollars
+			System.out.println("User id of first user is : "+firstUser(columnValues));			// Displays the user id of the first user that joined.
 			
 			
 			
